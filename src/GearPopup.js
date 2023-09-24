@@ -63,6 +63,7 @@ function GearPopup({ onClose, onSetRates }) {
         <p>เรทของรางวัลที่ 2: {totalRewards === 0 ? 0 : (rates.reward2 / totalRewards).toFixed(2)}</p>
         <p>เรทของรางวัลที่ 3: {totalRewards === 0 ? 0 : (rates.reward3 / totalRewards).toFixed(2)}</p>
         <button onClick={handleSave}>บันทึก</button>
+        <button onClick={onClose}>ปิด</button>
       </div>
     </div>
   );
