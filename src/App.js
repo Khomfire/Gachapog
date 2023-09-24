@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+// App.js
+import React, { useState } from 'react';
+import Gachapog from './Gachapog';
+import GearIcon from './assets/gear.png';
+import GearPopup from './GearPopup';
 import './App.css';
 
 function App() {
+  const [showGearPopup, setShowGearPopup] = useState(false);
+  const [rates, setRates] = useState({ reward1: 0, reward2: 0, reward3: 0 });
+
+  const openGearPopup = () => {
+    setShowGearPopup(true);
+  };
+
+  const closeGearPopup = () => {
+    setShowGearPopup(false);
+  };
+
+  const handleSetRates = (newRates) => {
+    setRates(newRates);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img
+        src={GearIcon}
+        alt="Gear Icon"
+        className="icon-gear"
+        onClick={openGearPopup}
+      />
+      <Gachapog rates={rates} />
+      {showGearPopup && <GearPopup onClose={closeGearPopup} onSetRates={handleSetRates} />}
     </div>
   );
 }

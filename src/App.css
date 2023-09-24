@@ -1,38 +1,47 @@
+/* App.css */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+button {
+  margin-top: 20px; /* ระยะห่างด้านบน */
+  display: block; /* ตั้งเป็น block เพื่อจัดให้ปุ่มเต็มความกว้างของพื้นที่ที่อยู่ใน */
+  margin-left: auto; /* จัดปุ่มอยู่ตรงกลางแนวนอน */
+  margin-right: auto; /* จัดปุ่มอยู่ตรงกลางแนวนอน */
 }
 
-.App-link {
-  color: #61dafb;
+
+/* ตั้งค่าสำหรับตำแหน่งและขนาดของไอคอน "Gear" */
+.icon-gear {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000; /* ให้ไอคอนแสดงเหนือส่วนอื่น */
+  width: 30px; /* ปรับขนาดไอคอนตามที่ต้องการ */
+  height: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* App.css */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
+
+button {
+  display: block;
+  margin-top: 20px;
+  /* ... (สไตล์อื่น ๆ ของปุ่ม) */
+}
+/* สไตล์ฟ้อนใหม่ */
+
