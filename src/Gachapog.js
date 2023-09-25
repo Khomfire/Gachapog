@@ -70,7 +70,8 @@ function Gachapog({ rates }) {
 
   return (
     <div>
-      <h1 className="Gachapog" >Gachapog</h1>
+      <h1 className="Gachapog" >กาชาปอง!</h1>
+      <h2>"สวัสดีท่านสมาชิกผู้ชอบเสี่ยงดวง"</h2>
       <img src={GachapogPNG} alt="Gachapog Machine" />
       <button
         onClick={handleRandom}
